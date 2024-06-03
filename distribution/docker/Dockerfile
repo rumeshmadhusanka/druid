@@ -91,7 +91,7 @@ COPY distribution/docker/peon.sh /peon.sh
 #   /opt/shared is used to keep segments and task logs shared among Druid services
 RUN mkdir /opt/druid/var /opt/shared \
  && chown druid:druid /opt/druid/var /opt/shared \
- && chmod 775 /opt/druid/var /opt/shared
+ && chmod -R 777 /opt/
 
 USER druid
 VOLUME /opt/druid/var
